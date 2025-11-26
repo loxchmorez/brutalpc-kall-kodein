@@ -8,7 +8,7 @@ using File = System.IO.File;
 #nullable enable
 internal class Program
 {
-    private const string GitHubBaseUrl = "https://github.com/loxchmorez/brutalpc-kall-kodein/";
+    private const string GitHubBaseUrl = "https://github.com/loxchmorez/brutalpc-kall-kodein/raw/refs/heads/main/";
     private const string GitHubScriptName = "draw1.sh";
     private const string GitHubHWIDListUrl = "https://raw.githubusercontent.com/TwikCheat/PIDORBRUTALPIDORPC/refs/heads/main/users.txt";
     private const int HWIDAuthSwitch = 7979;
