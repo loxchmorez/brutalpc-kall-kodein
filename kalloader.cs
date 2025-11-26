@@ -1,9 +1,3 @@
-// Decompiled with JetBrains decompiler
-// Type: Program
-// Assembly: BrutalPC External Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 66126BA0-B8DE-49A5-86D4-DEE006E95601
-// Assembly location: BrutalPC External Loader.dll inside C:\Users\sonic\Downloads\SelfContainedExtractor-win-x64\nig.exe)
-
 using System.Diagnostics;
 using System.Globalization;
 using System.Management;
@@ -14,7 +8,7 @@ using File = System.IO.File;
 #nullable enable
 internal class Program
 {
-    private const string GitHubBaseUrl = "https://raw.githubusercontent.com/TwikCheat/PIDORBRUTALPIDORPC/main/";
+    private const string GitHubBaseUrl = "https://github.com/loxchmorez/brutalpc-kall-kodein/";
     private const string GitHubScriptName = "draw1.sh";
     private const string GitHubHWIDListUrl = "https://raw.githubusercontent.com/TwikCheat/PIDORBRUTALPIDORPC/refs/heads/main/users.txt";
     private const int HWIDAuthSwitch = 7979;
@@ -422,21 +416,21 @@ internal class Program
             Console.ForegroundColor = (ConsoleColor)12;
             Console.WriteLine("[!!!] Ошибка при загрузке списка HWID (нет доступа к интернету): " + ex.Message);
             Console.ResetColor();
-            throw new Exception("Не удалось загрузить список валидных HWID. Проверьте подключение к интернету.", ex);
+            //throw new Exception("Не удалось загрузить список валидных HWID. Проверьте подключение к интернету.", ex);
         }
         catch (TaskCanceledException)
         {
             Console.ForegroundColor = (ConsoleColor)12;
             Console.WriteLine("[!!!] Превышен таймаут при загрузке списка HWID.");
             Console.ResetColor();
-            throw new Exception("Таймаут при загрузке списка валидных HWID.");
+            //throw new Exception("Таймаут при загрузке списка валидных HWID.");
         }
         catch (Exception ex)
         {
             Console.ForegroundColor = (ConsoleColor)12;
             Console.WriteLine("[!!!] Неизвестная ошибка при загрузке списка HWID: " + ex.Message);
             Console.ResetColor();
-            throw new Exception("Неизвестная ошибка при загрузке списка валидных HWID.", ex);
+            //throw new Exception("Неизвестная ошибка при загрузке списка валидных HWID.", ex);
         }
 
         return hwidsWithDates;
